@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>春暖花开 sex-两性健康知识与亲密关系科普指南</title>
+<meta name="description" content="春暖花开 sex 主题科普页面，围绕两性健康、亲密关系沟通、性教育常识、安全防护与常见疑问进行理性梳理，帮助读者建立科学、负责、尊重彼此的健康观念。">
+<meta name="keywords" content="春暖花开 sex,两性健康,性教育,亲密关系,安全防护,健康科普">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+:root{
+  --green:#3f8f6b;
+  --green-deep:#2c6b4f;
+  --green-light:#e8f4ee;
+  --warm:#d97a6c;
+  --warm-light:#fdf0ed;
+  --ink:#23302b;
+  --ink-soft:#5a6b64;
+  --line:#dfe8e3;
+  --bg:#f7fbf9;
+  --white:#ffffff;
+  --radius:14px;
+  --shadow:0 6px 22px rgba(44,107,79,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+ul{list-style:none;}
+
+/* ===== 顶部提示条 ===== */
+.top-note{
+  background:var(--green-deep);
+  color:#dff0e7;
+  font-size:13px;
+  text-align:center;
+  padding:8px 16px;
+  letter-spacing:.3px;
+}
+.top-note strong{color:#fff;font-weight:600;}
+
+/* ===== 页眉 ===== */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid var(--line);
+  position:sticky;
+  top:0;
+  z-index:50;
+}
+.header-inner{
+  max-width:1160px;
+  margin:0 auto;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-shrink:0;
+}
+.brand-mark{
+  width:38px;height:38px;
+  border-radius:11px;
+  background:linear-gradient(135deg,var(--green),var(--warm));
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:18px;font-weight:700;
+  box-shadow:0 4px 12px rgba(63,143,107,.28);
+}
+.brand-text b{
+  display:block;
+  font-size:17px;
+  letter-spacing:.5px;
+  color:var(--ink);
+}
+.brand-text span{
+  display:block;
+  font-size:12px;
+  color:var(--ink-soft);
+  letter-spacing:1px;
+}
+.main-nav{
+  display:flex;
+  gap:4px;
+  flex-wrap:wrap;
+}
+.main-nav a{
+  font-size:14.5px;
+  color:var(--ink-soft);
+  padding:7px 13px;
+  border-radius:9px;
+  transition:.2s;
+  white-space:nowrap;
+}
+.main-nav a:hover{
+  background:var(--green-light);
+  color:var(--green-deep);
+}
+.nav-toggle{
+  display:none;
+  background:var(--green-light);
+  border:none;
+  color:var(--green-deep);
+  font-size:20px;
+  width:40px;height:40px;
+  border-radius:10px;
+  cursor:pointer;
+}
+
+/* ===== 首屏 ===== */
+.hero{
+  background:
+    radial-gradient(circle at 12% 20%,rgba(217,122,108,.12),transparent 42%),
+    radial-gradient(circle at 88% 10%,rgba(63,143,107,.14),transparent 46%),
+    var(--white);
+  border-bottom:1px solid var(--line);
+}
+.hero-inner{
+  max-width:1160px;
+  margin:0 auto;
+  padding:56px 20px 50px;
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:44px;
+  align-items:center;
+}
+.hero-tag{
+  display:inline-block;
+  background:var(--warm-light);
+  color:var(--warm);
+  font-size:13px;
+  padding:5px 14px;
+  border-radius:20px;
+  margin-bottom:18px;
+  letter-spacing:.5px;
+}
+.hero h1{
+  font-size:34px;
+  line-height:1.4;
+  letter-spacing:.5px;
+  margin-bottom:18px;
+  color:var(--ink);
+}
+.hero h1 em{
+  font-style:normal;
+  color:var(--green-deep);
+  border-bottom:3px solid rgba(217,122,108,.45);
+  padding-bottom:2px;
+}
+.hero p.lead{
+  font-size:16.5px;
+  color:var(--ink-soft);
+  margin-bottom:26px;
+  max-width:560px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;
+  padding:12px 26px;
+  border-radius:11px;
+  font-size:15px;
+  font-weight:600;
+  transition:.22s;
+  border:1px solid transparent;
+}
+.btn-primary{
+  background:var(--green);
+  color:#fff;
+  box-shadow:0 6px 16px rgba(63,143,107,.28);
+}
+.btn-primary:hover{background:var(--green-deep);transform:translateY(-2px);}
+.btn-ghost{
+  background:var(--white);
+  color:var(--green-deep);
+  border-color:var(--line);
+}
+.btn-ghost:hover{border-color:var(--green);background:var(--green-light);}
+
+.hero-side{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px 24px 20px;
+  box-shadow:var(--shadow);
+}
+.hero-side h2{
+  font-size:16px;
+  color:var(--green-deep);
+  margin-bottom:14px;
+  padding-left:11px;
+  border-left:4px solid var(--warm);
+}
+.hero-side ul li{
+  font-size:14.5px;
+  color:var(--ink-soft);
+  padding:9px 0;
+  border-bottom:1px dashed var(--line);
+  display:flex;
+  gap:9px;
+}
+.hero-side ul li:last-child{border-bottom:none;}
+.hero-side ul li i{
+  font-style:normal;
+  color:var(--green);
+  font-weight:700;
+  flex-shrink:0;
+}
+
+/* ===== 通用区块 ===== */
+.section{
+  max-width:1160px;
+  margin:0 auto;
+  padding:56px 20px;
+}
+.section-head{
+  margin-bottom:30px;
+}
+.section-head .kicker{
+  font-size:13px;
+  color:var(--warm);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.section-head h2{
+  font-size:25px;
+  letter-spacing:.4px;
+  color:var(--ink);
+}
+.section-head p{
+  font-size:15px;
+  color:var(--ink-soft);
+  margin-top:10px;
+  max-width:760px;
+}
+
+/* ===== 知识卡片网格 ===== */
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(268px,1fr));
+  gap:20px;
+}
+.card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:24px 22px;
+  transition:.24s;
+  position:relative;
+  overflow:hidden;
+}
+.card::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  width:100%;height:3px;
+  background:linear-gradient(90deg,var(--green),var(--warm));
+  opacity:0;
+  transition:.24s;
+}
+.card:hover{
+  transform:translateY(-4px);
+  box-shadow:var(--shadow);
+  border-color:#cfe3d8;
+}
+.card:hover::before{opacity:1;}
+.card .num{
+  font-size:13px;
+  font-weight:700;
+  color:var(--green);
+  letter-spacing:1px;
+  margin-bottom:10px;
+}
+.card h3{
+  font-size:17.5px;
+  margin-bottom:10px;
+  color:var(--ink);
+}
+.card p{
+  font-size:14.5px;
+  color:var(--ink-soft);
+}
+.card .tags{
+  margin-top:14px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+.card .tags span{
+  font-size:12px;
+  color:var(--green-deep);
+  background:var(--green-light);
+  padding:3px 10px;
+  border-radius:14px;
+}
+
+/* ===== 重点内容双栏 ===== */
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+}
+.panel{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:28px 26px;
+}
+.panel h3{
+  font-size:19px;
+  margin-bottom:16px;
+  color:var(--green-deep);
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.panel h3 .dot{
+  width:9px;height:9px;
+  border-radius:50%;
+  background:var(--warm);
+  flex-shrink:0;
+}
+.panel ul.plain li{
+  font-size:14.8px;
+  color:var(--ink-soft);
+  padding:10px 0 10px 22px;
+  position:relative;
+  border-bottom:1px solid #f0f5f2;
+}
+.panel ul.plain li:last-child{border-bottom:none;}
+.panel ul.plain li::before{
+  content:"";
+  position:absolute;
+  left:2px;top:19px;
+  width:7px;height:7px;
+  border-radius:2px;
+  background:var(--green);
+  transform:rotate(45deg);
+}
+.panel ul.plain li b{color:var(--ink);font-weight:600;}
+
+/* ===== 步骤流程 ===== */
+.steps{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  counter-reset:step;
+}
+.step{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:26px 22px 22px;
+  position:relative;
+}
+.step::before{
+  counter-increment:step;
+  content:counter(step);
+  position:absolute;
+  top:-14px;left:22px;
+  width:32px;height:32px;
+  border-radius:10px;
+  background:var(--green);
+  color:#fff;
+  font-size:15px;
+  font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 10px rgba(63,143,107,.3);
+}
+.step h4{
+  font-size:16px;
+  margin:8px 0 8px;
+  color:var(--ink);
+}
+.step p{
+  font-size:14px;
+  color:var(--ink-soft);
+}
+
+/* ===== 注意事项 ===== */
+.notice-band{
+  background:var(--warm-light);
+  border:1px solid #f2d8d2;
+  border-radius:var(--radius);
+  padding:28px 26px;
+}
+.notice-band h3{
+  font-size:18px;
+  color:#b25a4c;
+  margin-bottom:14px;
+}
+.notice-band ul li{
+  font-size:14.8px;
+  color:#7d534c;
+  padding:8px 0 8px 24px;
+  position:relative;
+}
+.notice-band ul li::before{
+  content:"!";
+  position:absolute;
+  left:0;top:9px;
+  width:16px;height:16px;
+  border-radius:50%;
+  background:#e2a196;
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  display:flex;align-items:center;justify-content:center;
+  line-height:1;
+}
+
+/* ===== FAQ ===== */
+.faq-list{
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+.faq-item{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden;
+}
+.faq-q{
+  width:100%;
+  text-align:left;
+  background:none;
+  border:none;
+  font-family:inherit;
+  font-size:15.5px;
+  font-weight:600;
+  color:var(--ink);
+  padding:17px 20px;
+  cursor:pointer;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:14px;
+  transition:.2s;
+}
+.faq-q:hover{background:var(--green-light);}
+.faq-q .arrow{
+  color:var(--green);
+  font-size:18px;
+  transition:transform .25s;
+  flex-shrink:0;
+}
+.faq-item.open .faq-q{background:var(--green-light);color:var(--green-deep);}
+.faq-item.open .faq-q .arrow{transform:rotate(45deg);}
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height .3s ease;
+}
+.faq-a p{
+  font-size:14.6px;
+  color:var(--ink-soft);
+  padding:4px 20px 18px;
+}
+
+/* ===== 侧栏式信息条 ===== */
+.info-strip{
+  background:var(--green-deep);
+  color:#d9ebe2;
+  border-radius:var(--radius);
+  padding:34px 30px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:24px;
+}
+.info-strip .item h4{
+  font-size:16px;
+  color:#fff;
+  margin-bottom:8px;
+}
+.info-strip .item p{
+  font-size:14px;
+  line-height:1.7;
+}
+
+/* ===== 页脚 ===== */
+.site-footer{
+  background:#1f2b26;
+  color:#9fb3aa;
+  margin-top:20px;
+}
+.footer-inner{
+  max-width:1160px;
+  margin:0 auto;
+  padding:46px 20px 26px;
+  display:grid;
+  grid-template-columns:1.4fr 1fr 1fr;
+  gap:34px;
+}
+.footer-brand b{
+  color:#fff;
+  font-size:17px;
+  display:block;
+  margin-bottom:12px;
+}
+.footer-brand p{
+  font-size:13.6px;
+  line-height:1.8;
+}
+.footer-col h5{
+  color:#fff;
+  font-size:14.5px;
+  margin-bottom:14px;
+  letter-spacing:.5px;
+}
+.footer-col ul li{
+  font-size:13.6px;
+  padding:5px 0;
+}
+.footer-col ul li a:hover{color:#8fd3b4;}
+.footer-bottom{
+  border-top:1px solid #2e3d37;
+  text-align:center;
+  font-size:13px;
+  padding:18px 20px;
+  color:#7d918a;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width:960px){
+  .hero-inner{grid-template-columns:1fr;gap:32px;padding:44px 20px 40px;}
+  .split{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  .main-nav{
+    display:none;
+    position:absolute;
+    top:100%;left:0;right:0;
+    background:var(--white);
+    border-bottom:1px solid var(--line);
+    flex-direction:column;
+    padding:10px 16px 16px;
+    gap:2px;
+    box-shadow:0 12px 20px rgba(0,0,0,.06);
+  }
+  .main-nav.show{display:flex;}
+  .nav-toggle{display:block;}
+  .site-header{position:relative;}
+  .hero h1{font-size:26px;}
+  .section{padding:44px 18px;}
+  .section-head h2{font-size:21px;}
+  .footer-inner{grid-template-columns:1fr;gap:26px;}
+  .info-strip{padding:26px 22px;}
+}
+</style>
+</head>
+<body>
+
+<div class="top-note">
+  本页为<strong>两性健康与亲密关系科普</strong>内容，面向成年读者，倡导科学、尊重、安全与自愿原则。
+</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-mark">春</div>
+      <div class="brand-text">
+        <b>春暖花开</b>
+        <span>两性健康科普</span>
+      </div>
+    </div>
+    <nav class="main-nav" id="mainNav">
+      <a href="#basics">基础认知</a>
+      <a href="#health">健康要点</a>
+      <a href="#communicate">沟通与尊重</a>
+      <a href="#safety">安全防护</a>
+      <a href="#faq">常见疑问</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="展开导航">☰</button>
+  </div>
+</header>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <span class="hero-tag">成年读者 · 健康科普</span>
+        <h1>春暖花开 sex：用理性与尊重，理解<em>两性健康</em>这件事</h1>
+        <p class="lead">
+          当人们搜索“春暖花开 sex”时，背后往往是对亲密关系、身体变化与安全知识的真实疑问。
+          与其依赖零散传闻，不如从科学、生理、心理和沟通四个角度，建立一套清晰而负责的认知框架。
+        </p>
+        <div class="hero-actions">
+          <a href="#basics" class="btn btn-primary">从基础开始了解</a>
+          <a href="#faq" class="btn btn-ghost">查看常见疑问</a>
+        </div>
+      </div>
+      <aside class="hero-side">
+        <h2>阅读前请先了解</h2>
+        <ul>
+          <li><i>01</i>本页内容面向成年人，属于健康科普性质。</li>
+          <li><i>02</i>任何亲密行为都应建立在双方自愿、清醒、可随时停止的基础上。</li>
+          <li><i>03</i>涉及身体不适、疾病与用药，请咨询专业医疗人员。</li>
+          <li><i>04</i>尊重隐私，不传播他人私密信息与影像。</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 基础认知 -->
+  <section class="section" id="basics">
+    <div class="section-head">
+      <div class="kicker">Basics</div>
+      <h2>先建立正确的基础认知</h2>
+      <p>
+        两性健康不是难以启齿的话题，而是身体健康、心理状态与人际关系的一部分。
+        理解它，有助于减少焦虑、避免伤害，也能让亲密关系更稳定、更坦诚。
+      </p>
+    </div>
+    <div class="card-grid">
+      <article class="card">
+        <div class="num">认知 01</div>
+        <h3>它是健康的一部分</h3>
+        <p>世界卫生组织对性健康的定义，强调身体、情感、精神与社会层面的良好状态，而不仅仅是没有疾病。把它当作整体健康的一环，才能理性看待。</p>
+        <div class="tags"><span>整体健康</span><span>科学观念</span></div>
+      </article>
+      <article class="card">
+        <div class="num">认知 02</div>
+        <h3>自愿与同意是前提</h3>
+        <p>同意应当是清晰、自愿、可撤回的。沉默、犹豫、醉酒或受到压力，都不能被视为同意。这条原则适用于任何关系阶段。</p>
+        <div class="tags"><span>知情同意</span><span>边界意识</span></div>
+      </article>
+      <article class="card">
+        <div class="num">认知 03</div>
+        <h3>生理差异因人而异</h3>
+        <p>每个人的身体反应、节奏与需求都不同。网络上的“标准答案”往往并不适用于所有人，过度比较只会带来不必要的焦虑。</p>
+        <div class="tags"><span>个体差异</span><span>减少焦虑</span></div>
+      </article>
+      <article class="card">
+        <div class="num">认知 04</div>
+        <h3>心理状态同样重要</h3>
+        <p>压力、情绪、信任感与自我认同，都会影响亲密体验。关注心理感受，与关注身体状况同等重要。</p>
+        <div class="tags"><span>心理健康</span><span>情绪管理</span></div>
+      </article>
+      <article class="card">
+        <div class="num">认知 05</div>
+        <h3>信息要选可靠来源</h3>
+        <p>优先参考正规医疗机构、公共卫生机构与专业学会发布的科普内容，对来源不明的“偏方”和夸张说法保持警惕。</p>
+        <div class="tags"><span>信息辨别</span><span>权威来源</span></div>
+      </article>
+      <article class="card">
+        <div class="num">认知 06</div>
+        <h3>尊重隐私与边界</h3>
+        <p>不拍摄、不传播、不索要他人私密影像。保护自己也尊重他人，是成熟关系的基本素养。</p>
+        <div class="tags"><span>隐私保护</span><span>法律意识</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 健康要点 + 沟通 -->
+  <section class="section" id="health">
+    <div class="section-head">
+      <div class="kicker">Health &amp; Communication</div>
+      <h2>健康要点与沟通方式</h2>
+      <p>身体与关系从来不是分开的两件事。下面两组要点，分别从健康管理和关系沟通两个角度展开。</p>
+    </div>
+    <div class="split">
+      <div class="panel">
+        <h3><span class="dot"></span>日常健康管理要点</h3>
+        <ul class="plain">
+          <li><b>规律作息：</b>长期熬夜与过度疲劳会影响内分泌与情绪状态，间接影响身体感受。</li>
+          <li><b>适度运动：</b>有氧运动与力量训练有助于改善循环、体能与整体状态。</li>
+          <li><b>均衡饮食：</b>保证蛋白质、蔬果与水分摄入，避免长期依赖高糖高油饮食。</li>
+          <li><b>关注信号：</b>出现持续疼痛、异常出血、分泌物异常等情况，应及时就医，不要自行判断。</li>
+          <li><b>定期体检：</b>按医生建议进行常规健康检查，有助于早发现问题。</li>
+          <li><b>情绪调节：</b>长期焦虑或低落时，寻求心理咨询或专业帮助是负责任的选择。</li>
+        </ul>
+      </div>
+      <div class="panel" id="communicate">
+        <h3><span class="dot"></span>关系中的沟通原则</h3>
+        <ul class="plain">
+          <li><b>提前沟通：</b>在亲密接触前坦诚交流彼此的意愿、顾虑与边界。</li>
+          <li><b>及时表达：</b>过程中任何不适都可以直接说出来，随时可以暂停。</li>
+          <li><b>不带评判：</b>用“我感觉……”代替指责式表达，减少对方的防御心理。</li>
+          <li><b>倾听回应：</b>认真听对方的需求与拒绝，不把拒绝理解为否定。</li>
+          <li><b>事后交流：</b>事后温和地聊聊感受，有助于增进信任与理解。</li>
+          <li><b>尊重差异：</b>需求节奏不一致时，通过协商寻找双方都能接受的方式。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安全防护 -->
+  <section class="section" id="safety">
+    <div class="section-head">
+      <div class="kicker">Safety</div>
+      <h2>安全防护的四个基本步骤</h2>
+      <p>安全不是扫兴，而是让彼此都更安心的前提。以下步骤适用于大多数成年人的亲密场景。</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h4>确认意愿</h4>
+        <p>确保双方清醒、自愿，并且清楚知道自己可以随时说不。这是所有防护中最重要的一步。</p>
+      </div>
+      <div class="step">
+        <h4>了解健康状况</h4>
+        <p>坦诚沟通彼此的健康情况与既往病史，必要时共同咨询医生，而不是靠猜测。</p>
+      </div>
+      <div class="step">
+        <h4>采取防护措施</h4>
+        <p>正确使用安全套等措施，可降低意外妊娠与部分性传播感染的风险。使用前请阅读说明并检查有效期。</p>
+      </div>
+      <div class="step">
+        <h4>事后关注身体</h4>
+        <p>留意身体是否有异常反应，出现不适及时就医。定期检查是对自己和伴侣负责的做法。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 注意事项 -->
+  <section class="section">
+    <div class="notice-band">
+      <h3>需要特别留意的几点</h3>
+      <ul>
+        <li>任何未经对方同意的身体接触都可能构成违法，法律后果严重，务必明确边界。</li>
+        <li>不要传播、转发或威胁公开他人私密影像，这可能涉及侵犯隐私与相关法律责任。</li>
+        <li>遇到骚扰、胁迫或暴力，应优先保证自身安全，并及时向信任的人或相关机构求助。</li>
+        <li>网络上来路不明的“药品”“偏方”存在健康风险，切勿自行尝试。</li>
+        <li>未成年人不应接触此类内容，如遇困惑，建议向监护人、老师或专业机构咨询。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 常见疑问 -->
+  <section class="section" id="faq">
+    <div class="section-head">
+      <div class="kicker">FAQ</div>
+      <h2>常见疑问解答</h2>
+      <p>以下是读者较常提出的问题，答案以通用健康常识为基础，具体情况请以医生意见为准。</p>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">为什么不同资料里的说法差别很大？<span class="arrow">+</span></button>
+        <div class="faq-a">
+          <p>不同来源的编写目的、面向人群和更新时间各不相同。建议优先参考正规医疗机构、公共卫生机构与专业学会发布的科普内容，并注意内容是否标注了适用人群与更新时间。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">感到紧张或焦虑是正常的吗？<span class="arrow">+</span></button>
+        <div class="faq-a">
+          <p>很常见。紧张、压力、疲劳、对表现的担忧，都可能影响身体感受。与其强迫自己“必须正常”，不如先处理情绪与关系中的沟通问题，必要时寻求心理咨询帮助。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">如何和伴侣谈自己的需求与边界？<span class="arrow">+</span></button>
+        <div class="faq-a">
+          <p>选择双方都放松、不受打扰的时间，用平和、具体的语言表达感受与期待，同时给对方回应的空间。重点是协商，而不是说服对方接受单方面的要求。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">出现身体不适应该怎么办？<span class="arrow">+</span></button>
+        <div class="faq-a">
+          <p>不要自行用药或拖延。记录症状出现的时间与表现，尽快前往正规医疗机构就诊，并如实向医生说明情况，这样更有利于准确判断。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">怎样保护自己的隐私？<span class="arrow">+</span></button>
+        <div class="faq-a">
+          <p>谨慎对待私密影像与个人信息，不在不可信的平台留存敏感内容；发现被泄露或被威胁时，保留证据并向平台、警方或相关机构求助。</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">在哪里可以获得专业帮助？<span class="arrow">+</span></button>
+        <div class="faq-a">
+          <p>可以前往正规医院的妇科、泌尿外科、皮肤科或心理科咨询，也可联系当地公共卫生服务机构。涉及心理困扰时，专业的心理咨询同样值得考虑。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 信息条 -->
+  <section class="section">
+    <div class="info-strip">
+      <div class="item">
+        <h4>科学</h4>
+        <p>以可靠来源的医学与心理学常识为依据，拒绝夸大与恐吓式表达。</p>
+      </div>
+      <div class="item">
+        <h4>尊重</h4>
+        <p>承认个体差异，尊重每个人的边界、节奏与选择。</p>
+      </div>
+      <div class="item">
+        <h4>安全</h4>
+        <p>把防护意识与求助渠道放在重要位置，减少可避免的风险。</p>
+      </div>
+      <div class="item">
+        <h4>沟通</h4>
+        <p>鼓励坦诚交流，让关系建立在理解而非猜测之上。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <b>春暖花开 · 两性健康科普</b>
+      <p>
+        本页围绕“春暖花开 sex”这一搜索主题，整理两性健康、亲密关系沟通与安全防护方面的通用科普内容，
+        仅供成年读者学习参考，不构成医疗诊断或治疗建议。如有具体健康问题，请及时咨询专业医生。
+      </p>
+    </div>
+    <div class="footer-col">
+      <h5>内容导航</h5>
+      <ul>
+        <li><a href="#basics">基础认知</a></li>
+        <li><a href="#health">健康要点</a></li>
+        <li><a href="#communicate">沟通与尊重</a></li>
+        <li><a href="#safety">安全防护</a></li>
+        <li><a href="#faq">常见疑问</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>阅读提示</h5>
+      <ul>
+        <li>面向成年读者</li>
+        <li>倡导自愿与尊重</li>
+        <li>保护个人隐私</li>
+        <li>身体不适请就医</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 春暖花开两性健康科普 · 内容以公共卫生常识为基础，具体情况请以专业医疗意见为准
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('mainNav');
+  if(toggle && nav){
+    toggle.addEventListener('click', function(){
+      nav.classList.toggle('show');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('show');
+      }
+    });
+  }
+
+  var faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      faqItems.forEach(function(other){
+        other.classList.remove('open');
+        other.querySelector('.faq-a').style.maxHeight = null;
+      });
+      if(!isOpen){
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
+
+</body>
+  </html>
