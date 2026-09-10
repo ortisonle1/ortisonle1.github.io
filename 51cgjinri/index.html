@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>51CG今日吃瓜热门大瓜 - 网络热点话题聚合与吃瓜信息浏览指南</title>
+<meta name="description" content="51CG今日吃瓜热门大瓜页面聚合网络热门话题与吃瓜资讯，提供热点分类、今日热榜、话题追踪、围观指南与常见问题，帮助用户快速了解当下讨论度较高的网络事件与话题脉络。">
+<meta name="keywords" content="51CG,今日吃瓜,热门大瓜,吃瓜资讯,网络热点,话题聚合,热榜">
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+<style>
+  :root{
+    --bg:#0e0f14;
+    --bg-soft:#161821;
+    --panel:#1c1f2b;
+    --panel-2:#232735;
+    --line:#2e3344;
+    --text:#eceef5;
+    --text-dim:#a4a9bb;
+    --accent:#ff5c72;
+    --accent-2:#ffb347;
+    --accent-3:#5ac8fa;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB","Helvetica Neue",Arial,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ul{list-style:none}
+
+  .wrap{width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
+
+  /* 顶部滚动提示条 */
+  .ticker{
+    background:linear-gradient(90deg,#ff5c72,#ff8a4c 55%,#ffb347);
+    color:#1a0d10;
+    font-size:13px;
+    font-weight:600;
+    overflow:hidden;
+    white-space:nowrap;
+  }
+  .ticker span{
+    display:inline-block;
+    padding:7px 0;
+    animation:slide 26s linear infinite;
+  }
+  .ticker span b{font-weight:800}
+  @keyframes slide{
+    0%{transform:translateX(0)}
+    100%{transform:translateX(-50%)}
+  }
+
+  /* 页眉 */
+  header.site-head{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(14,15,20,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:18px;
+    height:66px;
+  }
+  .logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:19px;
+    font-weight:800;
+    letter-spacing:.5px;
+    white-space:nowrap;
+  }
+  .logo .mark{
+    width:34px;height:34px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;
+    color:#1a0d10;font-size:15px;font-weight:900;
+    box-shadow:0 6px 16px rgba(255,92,114,.35);
+  }
+  .logo em{
+    font-style:normal;
+    color:var(--accent);
+  }
+  nav.main-nav{display:flex;gap:6px;flex-wrap:wrap}
+  nav.main-nav a{
+    font-size:14px;
+    color:var(--text-dim);
+    padding:8px 12px;
+    border-radius:9px;
+    transition:.2s;
+  }
+  nav.main-nav a:hover{color:var(--text);background:var(--panel-2)}
+  .head-cta{
+    font-size:13px;
+    font-weight:700;
+    padding:9px 16px;
+    border-radius:999px;
+    background:linear-gradient(135deg,var(--accent),#ff8a4c);
+    color:#1a0d10;
+    white-space:nowrap;
+  }
+
+  /* 首屏 */
+  .hero{
+    position:relative;
+    padding:54px 0 44px;
+    background:
+      radial-gradient(900px 400px at 12% -10%,rgba(255,92,114,.22),transparent 60%),
+      radial-gradient(800px 380px at 92% 0%,rgba(90,200,250,.16),transparent 60%);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.35fr .95fr;
+    gap:34px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(27px,4vw,42px);
+    line-height:1.25;
+    letter-spacing:.5px;
+    margin-bottom:16px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .hero p.lead{
+    color:var(--text-dim);
+    font-size:15.5px;
+    max-width:640px;
+    margin-bottom:22px;
+  }
+  .hero-tags{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:24px}
+  .hero-tags span{
+    font-size:12.5px;
+    color:var(--text-dim);
+    border:1px solid var(--line);
+    background:var(--bg-soft);
+    padding:5px 12px;
+    border-radius:999px;
+  }
+  .hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+  .btn{
+    display:inline-block;
+    font-size:14.5px;
+    font-weight:700;
+    padding:12px 24px;
+    border-radius:11px;
+    transition:.2s;
+    border:1px solid transparent;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--accent),#ff8a4c);
+    color:#1a0d10;
+    box-shadow:0 10px 24px rgba(255,92,114,.28);
+  }
+  .btn-primary:hover{transform:translateY(-2px)}
+  .btn-ghost{
+    border-color:var(--line);
+    color:var(--text);
+    background:var(--bg-soft);
+  }
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+  .hero-side{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    box-shadow:var(--shadow);
+  }
+  .hero-side h2{
+    font-size:15px;
+    margin-bottom:14px;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  .hero-side h2::before{
+    content:"";
+    width:8px;height:8px;border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 4px rgba(255,92,114,.18);
+  }
+  .rank-list li{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:11px 0;
+    border-bottom:1px dashed var(--line);
+    font-size:14px;
+  }
+  .rank-list li:last-child{border-bottom:none}
+  .rank-no{
+    flex:0 0 22px;
+    height:22px;
+    border-radius:6px;
+    display:grid;place-items:center;
+    font-size:12px;
+    font-weight:800;
+    background:var(--panel-2);
+    color:var(--text-dim);
+  }
+  .rank-list li:nth-child(1) .rank-no{background:var(--accent);color:#1a0d10}
+  .rank-list li:nth-child(2) .rank-no{background:var(--accent-2);color:#1a0d10}
+  .rank-list li:nth-child(3) .rank-no{background:var(--accent-3);color:#0b1a22}
+  .rank-list li a{color:var(--text);transition:.2s}
+  .rank-list li a:hover{color:var(--accent)}
+  .rank-list small{display:block;color:var(--text-dim);font-size:12px;margin-top:2px}
+
+  /* 通用区块 */
+  section.block{padding:52px 0}
+  section.block.alt{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .sec-head{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:18px;
+    margin-bottom:26px;
+    flex-wrap:wrap;
+  }
+  .sec-head h2{
+    font-size:clamp(20px,2.6vw,26px);
+    letter-spacing:.4px;
+  }
+  .sec-head h2 span{
+    display:block;
+    font-size:13px;
+    font-weight:400;
+    color:var(--text-dim);
+    letter-spacing:0;
+    margin-top:6px;
+  }
+  .sec-head .more{
+    font-size:13.5px;
+    color:var(--accent);
+    border:1px solid rgba(255,92,114,.4);
+    padding:7px 14px;
+    border-radius:999px;
+    transition:.2s;
+  }
+  .sec-head .more:hover{background:rgba(255,92,114,.12)}
+
+  /* 分类卡 */
+  .cat-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:16px;
+  }
+  .cat-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px;
+    transition:.22s;
+    position:relative;
+    overflow:hidden;
+  }
+  .cat-card::after{
+    content:"";
+    position:absolute;
+    inset:auto -30% -60% auto;
+    width:130px;height:130px;
+    border-radius:50%;
+    background:radial-gradient(circle,rgba(255,92,114,.22),transparent 70%);
+    opacity:0;
+    transition:.3s;
+  }
+  .cat-card:hover{transform:translateY(-4px);border-color:rgba(255,92,114,.5)}
+  .cat-card:hover::after{opacity:1}
+  .cat-card .ico{
+    width:38px;height:38px;
+    border-radius:10px;
+    display:grid;place-items:center;
+    font-size:17px;
+    margin-bottom:13px;
+    background:var(--panel-2);
+  }
+  .cat-card h3{font-size:16px;margin-bottom:8px}
+  .cat-card p{font-size:13.5px;color:var(--text-dim)}
+  .cat-card .cnt{
+    display:inline-block;
+    margin-top:12px;
+    font-size:12px;
+    color:var(--accent-2);
+  }
+
+  /* 今日热瓜列表 */
+  .feed{display:grid;gap:16px}
+  .feed-item{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:20px 22px;
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    gap:18px;
+    align-items:center;
+    transition:.22s;
+  }
+  .feed-item:hover{border-color:rgba(255,92,114,.45);background:var(--panel-2)}
+  .feed-item .badge{
+    font-size:11.5px;
+    font-weight:700;
+    padding:5px 11px;
+    border-radius:999px;
+    white-space:nowrap;
+    background:rgba(255,92,114,.15);
+    color:var(--accent);
+    border:1px solid rgba(255,92,114,.35);
+  }
+  .feed-item .badge.b2{background:rgba(255,179,71,.14);color:var(--accent-2);border-color:rgba(255,179,71,.35)}
+  .feed-item .badge.b3{background:rgba(90,200,250,.14);color:var(--accent-3);border-color:rgba(90,200,250,.35)}
+  .feed-item h3{font-size:16.5px;margin-bottom:7px;line-height:1.5}
+  .feed-item h3 a:hover{color:var(--accent)}
+  .feed-item p{font-size:13.5px;color:var(--text-dim)}
+  .feed-meta{
+    font-size:12.5px;
+    color:var(--text-dim);
+    text-align:right;
+    white-space:nowrap;
+  }
+  .feed-meta strong{display:block;color:var(--accent-2);font-size:14px;margin-bottom:4px}
+
+  /* 围观指南 */
+  .guide-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+  }
+  .guide-card{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+  }
+  .guide-card .step{
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:1px;
+    color:var(--accent);
+    margin-bottom:10px;
+  }
+  .guide-card h3{font-size:16.5px;margin-bottom:10px}
+  .guide-card p{font-size:14px;color:var(--text-dim)}
+  .guide-card ul{margin-top:12px;display:grid;gap:7px}
+  .guide-card ul li{
+    font-size:13.5px;
+    color:var(--text-dim);
+    padding-left:16px;
+    position:relative;
+  }
+  .guide-card ul li::before{
+    content:"";
+    position:absolute;
+    left:0;top:9px;
+    width:6px;height:6px;
+    border-radius:50%;
+    background:var(--accent-2);
+  }
+
+  /* 话题脉络 */
+  .timeline{
+    border-left:2px solid var(--line);
+    margin-left:8px;
+    padding-left:24px;
+    display:grid;
+    gap:22px;
+  }
+  .tl-item{position:relative}
+  .tl-item::before{
+    content:"";
+    position:absolute;
+    left:-31px;top:6px;
+    width:12px;height:12px;
+    border-radius:50%;
+    background:var(--bg);
+    border:2px solid var(--accent);
+  }
+  .tl-item h3{font-size:15.5px;margin-bottom:6px}
+  .tl-item p{font-size:13.8px;color:var(--text-dim)}
+
+  /* 双栏内容 */
+  .two-col{
+    display:grid;
+    grid-template-columns:1.6fr 1fr;
+    gap:26px;
+    align-items:start;
+  }
+  .article-box{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px;
+  }
+  .article-box h2{font-size:21px;margin-bottom:14px}
+  .article-box h3{font-size:16px;margin:20px 0 9px;color:var(--accent-2)}
+  .article-box p{font-size:14.5px;color:var(--text-dim);margin-bottom:12px}
+  .article-box ul{margin:0 0 12px 0;display:grid;gap:8px}
+  .article-box ul li{
+    font-size:14px;
+    color:var(--text-dim);
+    padding-left:18px;
+    position:relative;
+  }
+  .article-box ul li::before{
+    content:"▸";
+    position:absolute;
+    left:0;
+    color:var(--accent);
+  }
+  .side-box{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    margin-bottom:18px;
+  }
+  .side-box h3{
+    font-size:15.5px;
+    margin-bottom:14px;
+    padding-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .side-list li{
+    font-size:13.8px;
+    padding:9px 0;
+    border-bottom:1px dashed var(--line);
+    color:var(--text-dim);
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .side-list li:last-child{border-bottom:none}
+  .side-list li a:hover{color:var(--accent)}
+  .side-list li em{font-style:normal;color:var(--accent-2);font-size:12.5px;white-space:nowrap}
+
+  /* FAQ */
+  .faq{display:grid;gap:12px}
+  .faq details{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:16px 20px;
+    transition:.2s;
+  }
+  .faq details[open]{border-color:rgba(255,92,114,.45)}
+  .faq summary{
+    cursor:pointer;
+    font-size:15.5px;
+    font-weight:600;
+    list-style:none;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:14px;
+  }
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::after{
+    content:"+";
+    font-size:20px;
+    color:var(--accent);
+    line-height:1;
+    flex:0 0 auto;
+  }
+  .faq details[open] summary::after{content:"–"}
+  .faq p{
+    font-size:14px;
+    color:var(--text-dim);
+    margin-top:12px;
+    padding-top:12px;
+    border-top:1px dashed var(--line);
+  }
+
+  /* 声明条 */
+  .notice{
+    background:linear-gradient(135deg,rgba(255,92,114,.12),rgba(255,179,71,.08));
+    border:1px solid rgba(255,92,114,.28);
+    border-radius:var(--radius);
+    padding:20px 24px;
+    font-size:13.8px;
+    color:var(--text-dim);
+  }
+  .notice strong{color:var(--accent-2)}
+
+  /* 页脚 */
+  footer.site-foot{
+    background:#0a0b10;
+    border-top:1px solid var(--line);
+    padding:44px 0 26px;
+    margin-top:10px;
+  }
+  .foot-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr 1fr;
+    gap:28px;
+    margin-bottom:30px;
+  }
+  .foot-grid h4{font-size:14.5px;margin-bottom:14px}
+  .foot-grid p,.foot-grid li{
+    font-size:13.5px;
+    color:var(--text-dim);
+    line-height:1.9;
+  }
+  .foot-grid li a:hover{color:var(--accent)}
+  .foot-bottom{
+    border-top:1px solid var(--line);
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:14px;
+    flex-wrap:wrap;
+    font-size:12.8px;
+    color:#767b8c;
+  }
+
+  /* 响应式 */
+  @media (max-width:960px){
+    .hero-grid{grid-template-columns:1fr}
+    .two-col{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:720px){
+    .head-inner{height:auto;padding:12px 0;flex-wrap:wrap}
+    nav.main-nav{order:3;width:100%;overflow-x:auto;padding-bottom:4px}
+    nav.main-nav a{white-space:nowrap}
+    .head-cta{display:none}
+    .feed-item{grid-template-columns:1fr;gap:12px}
+    .feed-meta{text-align:left}
+    .hero{padding:38px 0 34px}
+    section.block{padding:40px 0}
+    .foot-grid{grid-template-columns:1fr}
+    .article-box{padding:20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- 顶部滚动提示 -->
+<div class="ticker" aria-hidden="true">
+  <span>今日吃瓜观察：热点话题更新频繁，请以多方信息对照为准 &nbsp;·&nbsp; 围观有度，理性讨论 &nbsp;·&nbsp; 本页仅作话题聚合与浏览指引 &nbsp;·&nbsp; 今日吃瓜观察：热点话题更新频繁，请以多方信息对照为准 &nbsp;·&nbsp; 围观有度，理性讨论 &nbsp;·&nbsp; 本页仅作话题聚合与浏览指引 &nbsp;·&nbsp;</span>
+</div>
+
+<!-- 页眉 -->
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top">
+      <span class="mark">51</span>
+      <span>51CG<em>吃瓜</em></span>
+    </a>
+    <nav class="main-nav">
+      <a href="#today">今日热瓜</a>
+      <a href="#category">话题分类</a>
+      <a href="#guide">围观指南</a>
+      <a href="#track">话题脉络</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+    <a class="head-cta" href="#today">看今日热榜</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>51CG今日吃瓜热门大瓜：<em>快速看清当下讨论度最高的话题</em></h1>
+        <p class="lead">
+          当你在搜索“51CG今日吃瓜热门大瓜”时，真正想知道的通常不是一句结论，而是：今天大家都在讨论什么、这些话题从哪来、值不值得花时间看、以及怎样不被带节奏。本页把网络热点按类型、热度和时间线整理成可浏览的结构，帮助你在有限时间里建立对话题的基本判断。
+        </p>
+        <div class="hero-tags">
+          <span>热点聚合</span>
+          <span>话题分类</span>
+          <span>时间线梳理</span>
+          <span>围观礼仪</span>
+          <span>信息核对</span>
+        </div>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#today">浏览今日热瓜</a>
+          <a class="btn btn-ghost" href="#guide">先看围观指南</a>
+        </div>
+      </div>
+
+      <aside class="hero-side">
+        <h2>今日热度观察榜</h2>
+        <ul class="rank-list">
+          <li>
+            <span class="rank-no">1</span>
+            <div>
+              <a href="#today">平台热榜类话题</a>
+              <small>讨论集中、更新快，适合先看时间线</small>
+            </div>
+          </li>
+          <li>
+            <span class="rank-no">2</span>
+            <div>
+              <a href="#today">娱乐与作品相关话题</a>
+              <small>围绕作品、活动与公开动态展开</small>
+            </div>
+          </li>
+          <li>
+            <span class="rank-no">3</span>
+            <div>
+              <a href="#today">社交平台讨论型话题</a>
+              <small>观点分歧明显，需交叉核对</small>
+            </div>
+          </li>
+          <li>
+            <span class="rank-no">4</span>
+            <div>
+              <a href="#today">生活与消费类话题</a>
+              <small>实用性强，围观后可转化为经验</small>
+            </div>
+          </li>
+          <li>
+            <span class="rank-no">5</span>
+            <div>
+              <a href="#today">长期跟踪型话题</a>
+              <small>需要按时间顺序理解来龙去脉</small>
+            </div>
+          </li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 今日热瓜 -->
+  <section class="block" id="today">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>今日热门大瓜速览
+          <span>按话题类型分组，方便你按兴趣挑选，而不是被信息流推着走</span>
+        </h2>
+        <a class="more" href="#category">查看全部分类</a>
+      </div>
+
+      <div class="feed">
+        <article class="feed-item">
+          <span class="badge">热度上升</span>
+          <div>
+            <h3><a href="#track">热榜型话题：短时间内集中出现在多个平台的讨论</a></h3>
+            <p>这类话题的特点是传播快、版本多。建议先确认最早的信息来源，再对比后续补充内容，避免只看到被二次加工的片段。</p>
+          </div>
+          <div class="feed-meta">
+            <strong>适合快速浏览</strong>
+            时间线优先
+          </div>
+        </article>
+
+        <article class="feed-item">
+          <span class="badge b2">持续讨论</span>
+          <div>
+            <h3><a href="#track">作品与活动类话题：围绕公开内容与公开动态展开</a></h3>
+            <p>包括作品更新、公开活动、合作发布等。此类话题通常有相对明确的官方信息源，适合先看原始发布再看讨论。</p>
+          </div>
+          <div class="feed-meta">
+            <strong>信息较清晰</strong>
+            官方源优先
+          </div>
+        </article>
+
+        <article class="feed-item">
+          <span class="badge b3">观点分歧</span>
+          <div>
+            <h3><a href="#track">社交讨论型话题：不同立场在同一事件上产生分歧</a></h3>
+            <p>分歧本身不等于事实混乱。阅读时可以把“发生了什么”和“大家怎么看”分开记录，判断会清楚很多。</p>
+          </div>
+          <div class="feed-meta">
+            <strong>需要交叉核对</strong>
+            多方对照
+          </div>
+        </article>
+
+        <article class="feed-item">
+          <span class="badge">实用向</span>
+          <div>
+            <h3><a href="#track">生活消费类话题：与日常选择相关的讨论</a></h3>
+            <p>这类内容往往带有经验分享性质，围观价值在于借鉴思路，而不是照搬结论，因为每个人的实际情况并不相同。</p>
+          </div>
+          <div class="feed-meta">
+            <strong>可转化为经验</strong>
+            结合自身
+          </div>
+        </article>
+
+        <article class="feed-item">
+          <span class="badge b2">长期跟踪</span>
+          <div>
+            <h3><a href="#track">延续型话题：隔一段时间就会有新进展</a></h3>
+            <p>如果你只看到最新一条，很容易误解全貌。建议按时间顺序回看关键节点，再判断当前进展处于哪个阶段。</p>
+          </div>
+          <div class="feed-meta">
+            <strong>按时间回看</strong>
+            节点梳理
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 话题分类 -->
+  <section class="block alt" id="category">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>话题分类导航
+          <span>先选方向，再决定要不要深入了解，减少无效浏览</span>
+        </h2>
+      </div>
+
+      <div class="cat-grid">
+        <div class="cat-card">
+          <div class="ico">🔥</div>
+          <h3>热榜聚合</h3>
+          <p>多个平台短时间集中出现的话题，传播速度最快，也最容易出现信息偏差。</p>
+          <span class="cnt">适合先看时间线</span>
+        </div>
+        <div class="cat-card">
+          <div class="ico">🎬</div>
+          <h3>作品与活动</h3>
+          <p>围绕公开作品、公开活动与发布动态的讨论，通常有较明确的原始信息源。</p>
+          <span class="cnt">官方信息优先</span>
+        </div>
+        <div class="cat-card">
+          <div class="ico">💬</div>
+          <h3>社交讨论</h3>
+          <p>观点分歧明显的公共讨论，重点在于区分事实陈述与个人判断。</p>
+          <span class="cnt">建议多方对照</span>
+        </div>
+        <div class="cat-card">
+          <div class="ico">🛒</div>
+          <h3>生活消费</h3>
+          <p>与日常选择相关的经验型内容，可参考思路，但不宜直接照搬结论。</p>
+          <span class="cnt">结合自身情况</span>
+        </div>
+        <div class="cat-card">
+          <div class="ico">📈</div>
+          <h3>长期跟踪</h3>
+          <p>会持续更新的话题，需要按节点理解脉络，单看最新进展容易误判。</p>
+          <span class="cnt">节点式阅读</span>
+        </div>
+        <div class="cat-card">
+          <div class="ico">🧭</div>
+          <h3>围观方法</h3>
+          <p>关于如何高效、理性地浏览热点内容的通用方法，适用于各类话题。</p>
+          <span class="cnt">通用技巧</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 围观指南 -->
+  <section class="block" id="guide">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>吃瓜围观指南
+          <span>把浏览热点变成一件有方法、有边界的事</span>
+        </h2>
+      </div>
+
+      <div class="guide-grid">
+        <div class="guide-card">
+          <div class="step">STEP 01</div>
+          <h3>先确认信息来源</h3>
+          <p>看到一条热度很高的内容时，先问三个问题：最初是谁发布的、有没有原始材料、后续有没有补充说明。</p>
+          <ul>
+            <li>优先看原始发布而非二次转述</li>
+            <li>注意发布时间与更新顺序</li>
+            <li>区分“听说”与“已确认”</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="step">STEP 02</div>
+          <h3>把事实和观点分开</h3>
+          <p>同一件事，事实部分通常相对稳定，观点部分则因人而异。混在一起看，很容易把情绪当成结论。</p>
+          <ul>
+            <li>事实：发生了什么、何时发生</li>
+            <li>观点：谁怎么看、为什么这样看</li>
+            <li>推断：暂时无法确认的部分</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="step">STEP 03</div>
+          <h3>控制浏览节奏</h3>
+          <p>热点内容更新快，容易让人反复刷新。给自己设定一个浏览时长，比无限下拉更有效。</p>
+          <ul>
+            <li>先看时间线，再看讨论</li>
+            <li>设定单次浏览上限</li>
+            <li>重要话题收藏后再回看</li>
+          </ul>
+        </div>
+
+        <div class="guide-card">
+          <div class="step">STEP 04</div>
+          <h3>保持讨论边界</h3>
+          <p>围观可以表达看法，但涉及具体个人时，应避免传播未经确认的信息和带有攻击性的内容。</p>
+          <ul>
+            <li>不扩散无法核实的细节</li>
+            <li>不参与人身攻击式讨论</li>
+            <li>尊重当事人隐私与合法权益</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 话题脉络 + 延伸阅读 -->
+  <section class="block alt" id="track">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>话题脉络怎么读
+          <span>一个通用框架，适用于大多数持续发酵的热点</span>
+        </h2>
+      </div>
+
+      <div class="two-col">
+        <div class="article-box">
+          <h2>从“看到一条”到“看懂一件事”</h2>
+          <p>热点话题之所以容易让人困惑，往往不是因为信息太少，而是因为信息太多、顺序太乱。下面这个四步框架，可以帮助你在较短时间内建立对话题的基本理解。</p>
+
+          <h3>第一步：定位起点</h3>
+          <p>找到话题最早被集中讨论的时间点。起点往往决定了后续讨论的方向，也能帮你识别哪些内容是后来加上去的。</p>
+
+          <h3>第二步：梳理节点</h3>
+          <p>把关键进展按时间排列，标出哪些是新增信息、哪些是对旧信息的补充或修正。节点清晰之后，很多看似矛盾的说法就能解释。</p>
+
+          <h3>第三步：区分信源</h3>
+          <ul>
+            <li>原始发布：直接来自当事方或首发渠道</li>
+            <li>转述内容：经过二次加工，可能有取舍</li>
+            <li>讨论内容：以观点和情绪为主，参考价值有限</li>
+          </ul>
+
+          <h3>第四步：形成自己的判断</h3>
+          <p>当你能够说清“已知什么、未知什么、分歧在哪”，就已经比大多数只看了片段的人更接近事实。此时再决定是否继续关注，会更从容。</p>
+        </div>
+
+        <aside>
+          <div class="side-box">
+            <h3>高频浏览入口</h3>
+            <ul class="side-list">
+              <li><a href="#today">今日热瓜速览</a><em>更新快</em></li>
+              <li><a href="#category">话题分类导航</a><em>按方向</em></li>
+              <li><a href="#guide">围观四步法</a><em>方法论</em></li>
+              <li><a href="#faq">常见问题</a><em>答疑</em></li>
+              <li><a href="#notice">浏览须知</a><em>边界</em></li>
+            </ul>
+          </div>
+
+          <div class="side-box">
+            <h3>阅读小提示</h3>
+            <ul class="side-list">
+              <li>先看时间，再看结论<em>顺序</em></li>
+              <li>标题不等于全部内容<em>细节</em></li>
+              <li>热度高不代表更可信<em>判断</em></li>
+              <li>不确定就先不下结论<em>稳妥</em></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- 时间线示意 -->
+  <section class="block">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>一个话题通常经历的阶段
+          <span>理解阶段变化，有助于判断当前信息处于什么位置</span>
+        </h2>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item">
+          <h3>出现与扩散</h3>
+          <p>话题开始在小范围被讨论，随后进入更大的传播渠道。此阶段信息零散，版本差异较大。</p>
+        </div>
+        <div class="tl-item">
+          <h3>补充与修正</h3>
+          <p>更多信息被补充进来，部分早期说法可能被修正。此时适合回看时间线，而不是只看最新一条。</p>
+        </div>
+        <div class="tl-item">
+          <h3>讨论分化</h3>
+          <p>不同立场的观点开始形成，讨论重点从“发生了什么”转向“应该怎么看”。</p>
+        </div>
+        <div class="tl-item">
+          <h3>热度回落或长期跟踪</h3>
+          <p>话题要么逐渐降温，要么进入长期跟踪状态，需要按节点持续关注。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block alt" id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题
+          <span>关于吃瓜浏览与信息判断的常见疑问</span>
+        </h2>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>“51CG今日吃瓜热门大瓜”这类页面主要提供什么？</summary>
+          <p>这类页面通常用于聚合当下讨论度较高的话题，并提供分类、时间线和浏览方法。它的作用是帮助用户更快了解话题分布，而不是替代对原始信息的核对。</p>
+        </details>
+
+        <details>
+          <summary>为什么同一个话题会有多种说法？</summary>
+          <p>热点话题在传播过程中会经过多次转述，不同渠道的取舍和侧重点不同，因此出现差异是常见现象。建议以原始发布和可核实的材料为主要参考。</p>
+        </details>
+
+        <details>
+          <summary>怎样判断一条吃瓜信息是否值得相信？</summary>
+          <p>可以看三点：是否有明确的原始来源、是否给出了可核对的时间与细节、后续是否有一致的补充信息。三点都模糊时，建议先保持观望。</p>
+        </details>
+
+        <details>
+          <summary>围观热点时需要注意什么？</summary>
+          <p>注意不传播无法核实的信息，不参与针对具体个人的攻击性讨论，同时控制浏览时长，避免被高频更新影响正常作息和情绪。</p>
+        </details>
+
+        <details>
+          <summary>热度越高的内容就越重要吗？</summary>
+          <p>不一定。热度反映的是传播范围，而不是信息价值或真实性。有些高热度内容只是话题性强，实际可确认的信息并不多。</p>
+        </details>
+
+        <details>
+          <summary>如何高效地跟进一个长期话题？</summary>
+          <p>可以按时间节点做简单记录，只保留关键进展和来源，隔一段时间回看一次。这样比持续刷新更省时间，也更不容易被片段信息带偏。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 声明 -->
+  <section class="block" id="notice">
+    <div class="wrap">
+      <div class="notice">
+        <strong>浏览须知：</strong>本页面为话题聚合与浏览方法说明性质的内容页，所展示的分类与框架用于帮助用户理解网络热点的阅读方式，不针对任何具体个人或事件作出定性判断。网络信息更新频繁，请以多方来源对照为准，理性讨论，文明围观。
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 页脚 -->
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>51CG 吃瓜话题页</h4>
+        <p>围绕“今日吃瓜”与“热门大瓜”的浏览需求，提供话题分类、热度观察、时间线梳理与围观方法，帮助用户更有条理地了解网络热点。</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#today">今日热瓜速览</a></li>
+          <li><a href="#category">话题分类导航</a></li>
+          <li><a href="#guide">吃瓜围观指南</a></li>
+          <li><a href="#track">话题脉络解读</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>浏览帮助</h4>
+        <ul>
+          <li><a href="#faq">常见问题</a></li>
+          <li><a href="#notice">浏览须知</a></li>
+          <li><a href="#guide">信息核对方法</a></li>
+          <li><a href="#top">返回顶部</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>围观原则</h4>
+        <ul>
+          <li>不传播未核实信息</li>
+          <li>不参与人身攻击</li>
+          <li>尊重隐私与合法权益</li>
+          <li>控制浏览时长</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 51CG 吃瓜话题页 · 内容仅供浏览参考</span>
+      <span>理性围观 · 文明讨论 · 以多方信息对照为准</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // 平滑滚动增强（针对不支持 scroll-behavior 的环境）
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      var id = this.getAttribute('href');
+      if (id.length > 1) {
+        var target = document.querySelector(id);
+        if (target) {
+          e.preventDefault();
+          var top = target.getBoundingClientRect().top + window.pageYOffset - 76;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      }
+    });
+  });
+
+  // FAQ 一次只展开一项，便于阅读
+  var faqItems = document.querySelectorAll('.faq details');
+  faqItems.forEach(function (item) {
+    item.addEventListener('toggle', function () {
+      if (this.open) {
+        faqItems.forEach(function (other) {
+          if (other !== item) { other.open = false; }
+        });
+      }
+    });
+  });
+</script>
+
+</body>
+  </html>
